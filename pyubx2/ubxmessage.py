@@ -76,8 +76,9 @@ class UBXMessage:
             self._ubxID = ubxID
 
         self._do_attributes(**kwargs)
-
-        self._immutable = True  # once initialised, object is immutable
+        
+        #editing out the immutable property so we can edit the message to enable spoofing
+        #self._immutable = True  # once initialised, object is immutable
 
     def _do_attributes(self, **kwargs):
         """
